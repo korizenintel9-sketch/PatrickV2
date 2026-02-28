@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PATRICKBUGWA • NEON DARK • ULTIMATE XL • BY RENZZ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Inter', 'Poppins', system-ui, sans-serif;
+        }
+
+        body {
+            background: #030305;
+            min-height: 100vh;
+            width: 100%;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Full width dengan efek neon intensif */
+        .master-container {
+            width: 100%;
+            min-height: 100vh;
+            background: radial-gradient(circle at 0% 0%, #1a0033, #000000 80%);
+            position: relative;
+            padding: 20px 40px;
+        }
+
+        /* Grid cyberpunk super detail */
+        .cyber-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(0, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 0, 255, 0.03) 1px, transparent 1px);
+            background-size: 30px 30px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Floating neon orbs */
+        .neon-orbs {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 30%, rgba(0, 255, 255, 0.1) 0%, transparent 30%),
+                        radial-gradient(circle at 80% 70%, rgba(255, 0, 255, 0.1) 0%, transparent 30%);
+            animation: orbPulse 10s infinite alternate;
+            z-index: 0;
+        }
+
+        @keyframes orbPulse {
+            0% { opacity: 0.3; transform: scale(1); }
+            100% { opacity: 0.7; transform: scale(1.1); }
+        }
+
+        /* Konten utama di atas efek */
+        .content-layer {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+
+        /* Top bar premium */
+        .top-bar-premium {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(20px);
+            border: 2px solid;
+            border-image: linear-gradient(45deg, #00ffff, #ff00ff) 1;
+            border-radius: 50px;
+            padding: 15px 35px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 50px rgba(0, 255, 255, 0.3);
+        }
+
+        .logo-ultimate {
+            font-size: 3.2rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #00ffff, #ff00ff, #00ffff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 40px #00ffff, 0 0 80px #ff00ff;
+            animation: logoGlitch 3s infinite;
+            letter-spacing: 5px;
+        }
+
+        @keyframes logoGlitch {
+            0%, 100% { transform: skew(0deg); filter: hue-rotate(0deg); }
+            95% { transform: skew(2deg); filter: hue-rotate(10deg); }
+            96% { transform: skew(-2deg); filter: hue-rotate(-10deg); }
+        }
+
+        .badge-collection {
+            display: flex;
+            gap: 20px;
+        }
+
+        .badge-ultimate {
+            padding: 15px 30px;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            border: 2px solid;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+        }
+
+        .badge-safety {
+            border-color: #00ff88;
+            color: #00ff88;
+            box-shadow: 0 0 30px #00ff88;
+            animation: safetyPulse 2s infinite;
+        }
+
+        @keyframes safetyPulse {
+            0% { box-shadow: 0 0 20px #00ff88; }
+            100% { box-shadow: 0 0 60px #00ff88; }
+        }
+
+        .badge-size {
+            border-color: #ffaa00;
+            color: #ffaa00;
+            box-shadow: 0 0 30px #ffaa00;
+        }
+
+        /* Stats mega */
+        .stats-mega {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 25px;
+            margin-bottom: 35px;
+        }
+
+        .stat-mega-card {
+            background: rgba(10, 10, 30, 0.8);
+            backdrop-filter: blur(15px);
+            border-radius: 35px;
+            padding: 25px 20px;
+            border: 1px solid rgba(0, 255, 255, 0.4);
+            box-shadow: 0 0 40px rgba(0, 255, 255, 0.2);
+            transition: 0.4s;
+            text-align: center;
+        }
+
+        .stat-mega-card:hover {
+            border-color: #ff00ff;
+            box-shadow: 0 0 70px rgba(255, 0, 255, 0.4);
+            transform: translateY(-8px);
+        }
+
+        .stat-mega-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 0 15px currentColor);
+        }
+
+        .stat-mega-number {
+            font-size: 3.2rem;
+            font-weight: 800;
+            color: #00ffff;
+            text-shadow: 0 0 30px #00ffff;
+            line-height: 1;
+        }
+
+        .stat-mega-label {
+            color: #a0b0c0;
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+
+        .stat-mega-trend {
+            color: #ff00ff;
+            font-size: 1rem;
+            margin-top: 12px;
+        }
+
+        /* Layout utama - lebih lebar */
+        .main-flex-ultra {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 35px;
+        }
+
+        /* Panel kiri - bug methods (super lebar) */
+        .panel-left-ultra {
+            flex: 2.5;
+            background: rgba(5, 5, 20, 0.8);
+            backdrop-filter: blur(15px);
+            border-radius: 45px;
+            padding: 30px;
+            border: 2px solid rgba(255, 0, 255, 0.3);
+            box-shadow: 0 0 80px rgba(0, 255, 255, 0.15);
+        }
+
+        .panel-title-ultra {
+            font-size: 2.4rem;
+            color: #00ffff;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border-bottom: 3px solid #ff00ff;
+            padding-bottom: 20px;
+            text-shadow: 0 0 25px #00ffff;
+        }
+
+        /* Grid bug - 3 kolom agar lebih banyak */
+        .bug-grid-ultra {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .bug-card-ultra {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 35px;
+            padding: 25px;
+            border: 2px solid #00ffff30;
+            cursor: pointer;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bug-card-ultra::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+            transform: rotate(45deg);
+            transition: 0.5s;
+            opacity: 0;
+        }
+
+        .bug-card-ultra:hover::after {
+            opacity: 1;
+            animation: shine 1s;
+        }
+
+        @keyframes shine {
+            0% { transform: rotate(45deg) translateX(-100%); }
+            100% { transform: rotate(45deg) translateX(100%); }
+        }
+
+        .bug-card-ultra:hover {
+            border-color: #ff00ff;
+            transform: scale(1.03);
+            box-shadow: 0 0 60px rgba(255, 0, 255, 0.4);
+        }
+
+        .bug-icon-ultra {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 20px currentColor);
+        }
+
+        .bug-name-ultra {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #00ffff;
+            margin-bottom: 12px;
+        }
+
+        .bug-desc-ultra {
+            color: #b0c0d0;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .bug-tags {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .bug-tag-ultra {
+            padding: 8px 18px;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .tag-critical {
+            background: rgba(255, 0, 0, 0.2);
+            border: 1px solid #ff0000;
+            color: #ff6666;
+        }
+
+        .tag-android {
+            background: rgba(0, 255, 0, 0.2);
+            border: 1px solid #00ff00;
+            color: #88ff88;
+        }
+
+        .tag-ios {
+            background: rgba(0, 0, 255, 0.2);
+            border: 1px solid #0088ff;
+            color: #88aaff;
+        }
+
+        .tag-malware {
+            background: rgba(255, 0, 255, 0.3);
+            border: 1px solid #ff00ff;
+            color: #ffaaff;
+        }
+
+        .tag-safety {
+            background: rgba(255, 255, 0, 0.2);
+            border: 1px solid #ffff00;
+            color: #ffffaa;
+        }
+
+        /* Panel kanan */
+        .panel-right-ultra {
+            flex: 1.2;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        /* Safety shield panel */
+        .safety-shield {
+            background: rgba(0, 40, 20, 0.9);
+            backdrop-filter: blur(15px);
+            border-radius: 40px;
+            padding: 25px;
+            border: 3px solid #00ff88;
+            box-shadow: 0 0 60px #00ff88;
+        }
+
+        .shield-title {
+            font-size: 2rem;
+            color: #00ff88;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px #00ff88;
+        }
+
+        .shield-features {
+            color: white;
+            font-size: 1.1rem;
+            line-height: 2;
+        }
+
+        .shield-features li {
+            margin-left: 25px;
+            color: #aaffaa;
+        }
+
+        /* Target panel */
+        .target-panel-ultra {
+            background: rgba(10, 10, 30, 0.9);
+            backdrop-filter: blur(15px);
+            border-radius: 40px;
+            padding: 30px;
+            border: 2px solid #00ffff;
+        }
+
+        .input-ultra {
+            width: 100%;
+            padding: 20px 25px;
+            background: rgba(0, 0, 0, 0.7);
+            border: 2px solid #ff00ff;
+            border-radius: 60px;
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .input-ultra:focus {
+            box-shadow: 0 0 50px #ff00ff;
+            border-color: #00ffff;
+        }
+
+        .btn-ultra {
+            width: 100%;
+            padding: 22px;
+            border-radius: 60px;
+            font-weight: 800;
+            font-size: 1.4rem;
+            letter-spacing: 2px;
+            border: 3px solid;
+            cursor: pointer;
+            transition: 0.3s;
+            background: transparent;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .btn-execute-ultra {
+            border-color: #00ffff;
+            color: #00ffff;
+            box-shadow: 0 0 50px #00ffff;
+        }
+
+        .btn-execute-ultra:hover {
+            background: #00ffff;
+            color: black;
+            box-shadow: 0 0 100px #00ffff;
+        }
+
+        .btn-clear-ultra {
+            border-color: #ff00ff;
+            color: #ff00ff;
+            box-shadow: 0 0 50px #ff00ff;
+        }
+
+        .btn-clear-ultra:hover {
+            background: #ff00ff;
+            color: black;
+            box-shadow: 0 0 100px #ff00ff;
+        }
+
+        /* Notification panel premium */
+        .notif-panel-ultra {
+            background: rgba(20, 0, 30, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 40px;
+            padding: 25px;
+            border: 2px solid #ff00ff;
+            min-height: 350px;
+        }
+
+        .notif-header-ultra {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #ff00ff;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        .notif-title-ultra {
+            font-size: 1.8rem;
+            color: #ff00ff;
+            text-shadow: 0 0 20px #ff00ff;
+        }
+
+        .notif-counter-ultra {
+            background: #ff00ff30;
+            padding: 10px 25px;
+            border-radius: 40px;
+            color: #ff00ff;
+            border: 2px solid #ff00ff;
+            font-size: 1.2rem;
+        }
+
+        .notif-messages-ultra {
+            max-height: 500px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+
+        .notif-item-ultra {
+            background: rgba(0, 0, 0, 0.6);
+            border-left: 6px solid;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 20px;
+            animation: slideIn 0.3s;
+        }
+
+        .notif-success {
+            border-left-color: #00ffff;
+        }
+
+        .notif-warning {
+            border-left-color: #ff00ff;
+        }
+
+        .notif-safety {
+            border-left-color: #00ff88;
+        }
+
+        /* History table lebar */
+        .history-ultra {
+            background: rgba(5, 5, 20, 0.8);
+            backdrop-filter: blur(15px);
+            border-radius: 45px;
+            padding: 30px;
+            margin-top: 35px;
+            border: 2px solid #00ffff30;
+            overflow-x: auto;
+        }
+
+        .history-table-ultra {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.1rem;
+        }
+
+        .history-table-ultra th {
+            text-align: left;
+            padding: 20px;
+            color: #ff00ff;
+            border-bottom: 3px solid #00ffff;
+            font-size: 1.2rem;
+        }
+
+        .history-table-ultra td {
+            padding: 20px;
+            color: #d0e0f0;
+            border-bottom: 1px solid #00ffff30;
+        }
+
+        .history-table-ultra tr:hover td {
+            background: rgba(0, 255, 255, 0.1);
+            color: #00ffff;
+        }
+
+        .status-safe {
+            color: #00ff88;
+            font-weight: 700;
+        }
+
+        /* Footer */
+        .footer-ultra {
+            margin-top: 45px;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(15px);
+            border-radius: 50px;
+            border: 2px solid #ff00ff;
+            text-align: center;
+            color: #ff00ffaa;
+            font-size: 1.2rem;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 16px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1a1a2a;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(#00ffff, #ff00ff);
+            border-radius: 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1600px) {
+            .stats-mega {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .bug-grid-ultra {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .main-flex-ultra {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="master-container">
+        <div class="cyber-grid"></div>
+        <div class="neon-orbs"></div>
+        
+        <div class="content-layer">
+            <!-- Top Bar -->
+            <div class="top-bar-premium">
+                <div class="logo-ultimate">⚡ PATRICKBUGWA • ULTIMATE</div>
+                <div class="badge-collection">
+                    <span class="badge-ultimate badge-safety">🛡️ USER AMAN 100%</span>
+                    <span class="badge-ultimate badge-size">📦 48.6 MB</span>
+                    <span class="badge-ultimate" style="border-color: #00ffff; color: #00ffff;">🔴 LIVE 2.4K</span>
+                </div>
+            </div>
+
+            <!-- Mega Stats -->
+            <div class="stats-mega">
+                <div class="stat-mega-card">
+                    <div class="stat-mega-icon">💣</div>
+                    <div class="stat-mega-number">312</div>
+                    <div class="stat-mega-label">Total Bug Variants</div>
+                    <div class="stat-mega-trend">+28 baru</div>
+                </div>
+                <div class="stat-mega-card">
+                    <div class="stat-mega-icon">📱</div>
+                    <div class="stat-mega-number">189</div>
+                    <div class="stat-mega-label">Android Exploits</div>
+                    <div class="stat-mega-trend">Force close ready</div>
+                </div>
+                <div class="stat-mega-card">
+                    <div class="stat-mega-icon">🍎</div>
+                    <div class="stat-mega-number">94</div>
+                    <div class="stat-mega-label">iOS Exploits</div>
+                    <div class="stat-mega-trend">Crash UI</div>
+                </div>
+                <div class="stat-mega-card">
+                    <div class="stat-mega-icon">🦠</div>
+                    <div class="stat-mega-number">28</div>
+                    <div class="stat-mega-label">Malware/Virus</div>
+                    <div class="stat-mega-trend">Android simulator</div>
+                </div>
+                <div class="stat-mega-card">
+                    <div class="stat-mega-icon">📞</div>
+                    <div class="stat-mega-number">1.2K</div>
+                    <div class="stat-mega-label">Spam Calls Today</div>
+                    <div class="stat-mega-trend">+450 banned</div>
+                </div>
+                <div class="stat-mega-card">
+                    <div class="stat-mega-icon">🛡️</div>
+                    <div class="stat-mega-number">100%</div>
+                    <div class="stat-mega-label">User Safety</div>
+                    <div class="stat-mega-trend">Zero lag</div>
+                </div>
+            </div>
+
+            <!-- Main Flex Ultra -->
+            <div class="main-flex-ultra">
+                <!-- Left Panel: All Bugs Integrated -->
+                <div class="panel-left-ultra">
+                    <div class="panel-title-ultra">
+                        <span>💣 INTEGRATED BUG LAB • 312 VARIANTS</span>
+                        <span style="font-size: 1.4rem; color: #ff00ff;">ALL IN ONE</span>
+                    </div>
+                    
+                    <div class="bug-grid-ultra">
+                        <!-- Baris 1: Force Close & Crash -->
+                        <div class="bug-card-ultra" onclick="executeWithTarget('force-close')">
+                            <div class="bug-icon-ultra">💥</div>
+                            <div class="bug-name-ultra">Force Close Android</div>
+                            <div class="bug-desc-ultra">Exploit media dengan metadata corrupt, langsung force close WA tanpa jejak</div>
+                            <div class="bug-tags">
+                                <span class="bug-tag-ultra tag-critical">force close</span>
+                                <span class="bug-tag-ultra tag-android">android</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bug-card-ultra" onclick="executeWithTarget('force-close-invisible')">
+                            <div class="bug-icon-ultra">👻</div>
+                            <div class="bug-name-ultra">Force Close Invisible</div>
+                            <div class="bug-desc-ultra">Bug tanpa notifikasi di target, WA tiba-tiba crash di background</div>
+                            <div class="bug-tags">
+                                <span class="bug-tag-ultra tag-critical">invisible</span>
+                                <span class="bug-tag-ultra tag-android">stealth</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bug-card-ultra" onclick="executeWithTarget('crash-ui-andro')">
+                            <div class="bug-icon-ultra">📱</div>
+                            <div class="bug-name-ultra">Crash UI Android</div>
+                            <div class="bug-desc-ultra">UI WhatsApp freeze total, tidak bisa response, perlu paksa tutup</div>
+                            <div class="bug-tags">
+                                <span class="bug-tag-ultra tag-android">ui crash</span>
+                                <span class="bug-tag-ultra">rendering</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Baris 2: iOS & Spam -->
+                        <div class="bug-card-ultra" onclick="executeWithTarget('crash-ui-ios')">
+                            <div class="bug-icon-ultra">🍎</div>
+                            <div class="bug-name-ultra">Crash UI iOS</div>
+                            <div class="bug-desc-ultra">SpringBoard crash, WhatsApp force close di iPhone tanpa bisa dibuka</div>
+                            <div class="bug-tags">
+                                <span class="bug-tag-ultra tag-ios">ios</span>
+                                <span class="bug-tag-ultra tag-critical">crash</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bug-card-ultra" onclick="executeWithTarget('spam-call')">
+                            <div class="bug-icon-ultra">📞</div>
+                            <div class="bug-name-ultra">Spam Call Bomb</div>
+                            <div class="bug-desc-ultra">Ribuan panggilan spam simultan, bikin hp target lag total</div>
+                            <div class="bug-tags">
+                                <span class="bug-tag-ultra">spam</span>
+                                <span class="bug-tag-ultra tag-critical">flood</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bug-card-ultra" onclick="executeWithTarget('spam-banned')">
+                            <div class="bug-icon-ultra">🚫</div>
+                            <div class="bug-name-ultra">Spam Banned</div>
+                            <div class="bug-desc-ultra">Membuat nomor target di-banned WhatsApp karena aktivitas mencurigakan</div>
+                            <div class="bug-tags">
+                                <span class="bug-tag-ultra tag-critical">banned</span>
+                                <span class="bug-tag-ultra">whatsapp</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Baris 3: Malware & Virus -->
+                        <div class="bug-card-ultra" onclick="executeWithTarget('andro-malware')">
+                            <div class="bug-icon-ultra">🦠</div>
+                            <div class="bug-name-ultra">Android Malware Sim</div>
+                            <div class="bug-desc-ultra">Simulasi malware melalui file APK palsu, bikin sistem waspada</div>
+                            <div class="bug-tags">
+                                <span class="bug-tag-ultra tag-malware">malware</span>
+                                <span class="bug-tag-ultra tag-android">android</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bug-card-ultra" onclick="executeWithTarget('virus-wa')">
+                            <div class="bug-icon-ultra">🧬</div>
+                            <div class="bug-name-ultra">Virus WA Chain</div>
+                            <div class="bug-desc-ultra">Menyebarkan virus via chat, auto forward ke kontak</div>
+                            <div class="bug-tags">
+                                <span class="bug-tag-ultra tag-malware">virus</span>
+                                <span class="bug-tag-ultra">spread</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bug-card-ultra" onclick="executeWithTarget('ransomware-sim')">
+                            <div class="bug-icon-ultra">🔒</div>
+                            <div class="bug-name-ultra">Ransomware Sim</div>
+                            <div class="bug-desc-ultra">Simulasi ransomware, enkripsi chat (simulasi aman)</div>
+                            <div class="bug-tags">
+                                <span class="bug-tag-ultra tag-malware">ransomware</span>
+                                <span class="bug-tag-ultra tag-safety">simulasi</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Baris 4: Add Crash & Loop (dari file) -->
+                        <div class="bug-card-ultra" onclick="executeWithTarget('add-crash')">
+                            <div class="bug-icon-ultra">👥</div>
+                            <div class="bug-name-ultra">Add Crash</div>
+                            <div class="bug-desc-ultra">Auto join grup + spam, bikin notif overload crash</div>
+                            <div class="bug-tags">
+                                <span class="bug-tag-ultra">social</span>
+                                <span class="bug-tag-ultra">crash</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bug-card-ultra" onclick="executeWithTarget('loop')">
+                            <div class="bug-icon-ultra">🔄</div>
+                            <div class="bug-name-ultra">Reaction Loop</div>
+                            <div class="bug-desc-ultra">Reaksi berulang infinite, crash UI</div>
+                            <div class="bug-tags">
+                                <span class="bug-tag-ultra">bug</span>
+                                <span class="bug-tag-ultra">loop</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bug-card-ultra" onclick="executeWithTarget('voice-corrupt')">
+                            <div class="bug-icon-ultra">🎤</div>
+                            <div class="bug-name-ultra">Voice Note Corrupt</div>
+                            <div class="bug-desc-ultra">OPUS header invalid, crash saat playback</div>
+                            <div class="bug-tags">
+                                <span class="bug-tag-ultra">audio</span>
+                                <span class="bug-tag-ultra">crash</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Baris 5: Document & Location -->
+                        <div class="bug-card-ultra" onclick="executeWithTarget('doc-crash')">
+                            <div class="bug-icon-ultra">📄</div>
+                            <div class="bug-name-ultra">Document Preview Crash</div>
+                            <div class="bug-desc-ultra">DOCX dengan XML corrupt, crash preview</div>
+                            <div class="bug-tags">
+                                <span class="bug-tag-ultra">office</span>
+                                <span class="bug-tag-ultra">crash</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bug-card-ultra" onclick="executeWithTarget('location-spoof')">
+                            <div class="bug-icon-ultra">📍</div>
+                            <div class="bug-name-ultra">Location Spoof Crash</div>
+                            <div class="bug-desc-ultra">Koordinat invalid, bikin maps crash</div>
+                            <div class="bug-tags">
+                                <span class="bug-tag-ultra">gps</span>
+                                <span class="bug-tag-ultra">maps</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Baris 6: Tambahan Zero Click dll -->
+                        <div class="bug-card-ultra" onclick="executeWithTarget('zero-click')">
+                            <div class="bug-icon-ultra">⚡</div>
+                            <div class="bug-name-ultra">Zero-Click Crash</div>
+                            <div class="bug-desc-ultra">Crash tanpa interaksi, cukup kirim pesan</div>
+                            <div class="bug-tags">
+                                <span class="bug-tag-ultra tag-critical">zero-click</span>
+                                <span class="bug-tag-ultra">remote</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bug-card-ultra" onclick="executeWithTarget('media-bomb')">
+                            <div class="bug-icon-ultra">📸</div>
+                            <div class="bug-name-ultra">Media Bomb</div>
+                            <div class="bug-desc-ultra">1000+ media simultan, force close</div>
+                            <div class="bug-tags">
+                                <span class="bug-tag-ultra">heavy</span>
+                                <span class="bug-tag-ultra">crash</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bug-card-ultra" onclick="executeWithTarget('sticker-exploit')">
+                            <div class="bug-icon-ultra">🧩</div>
+                            <div class="bug-name-ultra">Sticker Exploit</div>
+                            <div class="bug-desc-ultra">Dimensi invalid, crash render</div>
+                            <div class="bug-tags">
+                                <span class="bug-tag-ultra">webp</span>
+                                <span class="bug-tag-ultra">crash</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Panel -->
+                <div class="panel-right-ultra">
+                    <!-- Safety Shield -->
+                    <div class="safety-shield">
+                        <div class="shield-title">
+                            <span>🛡️ SAFETY SHIELD</span>
+                            <span style="font-size: 1rem;">ACTIVE</span>
+                        </div>
+                        <ul class="shield-features">
+                            <li>✓ Pengguna 100% AMAN - hanya duduk diam</li>
+                            <li>✓ Target saja yang kena dampak</li>
+                            <li>✓ Zero lag di sisi pengguna</li>
+                            <li>✓ Anti recoil - tidak kena bug sendiri</li>
+                            <li>✓ Isolasi penuh dari payload</li>
+                            <li>✓ Aman dari segala malware/virus</li>
+                        </ul>
+                    </div>
+
+                    <!-- Target Panel -->
+                    <div class="target-panel-ultra">
+                        <div class="panel-title-ultra" style="font-size: 2rem; margin-bottom: 20px;">
+                            🎯 TARGET PANEL
+                        </div>
+                        
+                        <input type="text" class="input-ultra" id="targetNumber" placeholder="📱 Nomor target (ex: +62812xxxx)" value="">
+                        <input type="text" class="input-ultra" id="groupLink" placeholder="👥 Link grup / ID (opsional)">
+                        
+                        <select class="input-ultra" id="deliveryMethod">
+                            <option>Direct Message (Private)</option>
+                            <option>Via Grup + Auto Add</option>
+                            <option>Broadcast Exploit</option>
+                            <option>Status/Story</option>
+                            <option>VoIP Call Spoof</option>
+                            <option>QR Code Exploit</option>
+                        </select>
+                        
+                        <button class="btn-ultra btn-execute-ultra" onclick="executeBug()">🔥 EKSEKUSI BUG</button>
+                        <button class="btn-ultra btn-clear-ultra" onclick="clearAll()">🗑️ RESET</button>
+                    </div>
+
+                    <!-- Notification Panel -->
+                    <div class="notif-panel-ultra">
+                        <div class="notif-header-ultra">
+                            <span class="notif-title-ultra">🔔 NOTIFIKASI</span>
+                            <span class="notif-counter-ultra" id="notifCount">0</span>
+                        </div>
+                        
+                        <div class="notif-messages-ultra" id="notificationArea">
+                            <div class="notif-item-ultra notif-success">
+                                <div style="color: #00ffff;">[SYSTEM]</div>
+                                <div style="color: white; font-size: 1.2rem;">🛡️ Safety shield aktif</div>
+                                <div style="color: #88ff88;">Pengguna 100% aman</div>
+                            </div>
+                            <div class="notif-item-ultra notif-safety">
+                                <div style="color: #00ff88;">[INFO]</div>
+                                <div style="color: white;">Menunggu perintah dari Renzz</div>
+                                <div style="color: #aaffaa;">Zero lag di sisi pengguna</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- History Table Lebar -->
+            <div class="history-ultra">
+                <div class="panel-title-ultra" style="font-size: 2rem;">
+                    📋 EXECUTION HISTORY • TARGET AMAN, USER AMAN
+                </div>
+                
+                <table class="history-table-ultra">
+                    <thead>
+                        <tr>
+                            <th>TIME</th>
+                            <th>TARGET</th>
+                            <th>BUG METHOD</th>
+                            <th>STATUS</th>
+                            <th>USER SAFETY</th>
+                            <th>NOTIFICATION</th>
+                        </tr>
+                    </thead>
+                    <tbody id="historyBody">
+                        <tr>
+                            <td>10:23:45</td>
+                            <td>+62812****8901</td>
+                            <td>Force Close Android</td>
+                            <td class="status-safe">✓ SUCCESS</td>
+                            <td>🛡️ AMAN (duduk diam)</td>
+                            <td>Nomor target terkena bug</td>
+                        </tr>
+                        <tr>
+                            <td>10:18:22</td>
+                            <td>+44789****234</td>
+                            <td>Spam Banned</td>
+                            <td class="status-safe">✓ SUCCESS</td>
+                            <td>🛡️ AMAN (no lag)</td>
+                            <td>Target kena banned</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer-ultra">
+                ⚡ PATRICKBUGWA • NEON DARK ULTIMATE • BY RENZZ • 48.6 MB • 312 BUG VARIANTS<br>
+                🛡️ PENGGUNA AMAN 100% • DUDUK DIAM TUNGGU TARGET • ANTI RECOIL • ZERO LAG • FOR EDUCATIONAL PURPOSE ONLY
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Safety first: user aman, hanya target yang kena
+        let notificationCount = 2; // dari 2 notifikasi awal
+        const userSafety = true; // SELALU AMAN
+
+        function addNotification(message, detail, type = 'success') {
+            const notifArea = document.getElementById('notificationArea');
+            const notifCountSpan = document.getElementById('notifCount');
+            
+            const now = new Date();
+            const timeStr = `[${now.getHours().toString().padStart(2,'0')}:${now.getMinutes().toString().padStart(2,'0')}:${now.getSeconds().toString().padStart(2,'0')}]`;
+            
+            let typeClass = 'notif-success';
+            if (type === 'safety') typeClass = 'notif-safety';
+            else if (type === 'warning') typeClass = 'notif-warning';
+            
+            const notifItem = document.createElement('div');
+            notifItem.className = `notif-item-ultra ${typeClass}`;
+            notifItem.innerHTML = `
+                <div style="color: ${type === 'safety' ? '#00ff88' : '#00ffff'};">${timeStr}</div>
+                <div style="color: white; font-size: 1.2rem;">${message}</div>
+                <div style="color: ${type === 'safety' ? '#aaffaa' : '#ffaaff'};">${detail}</div>
+            `;
+            
+            notifArea.insertBefore(notifItem, notifArea.firstChild);
+            
+            while (notifArea.children.length > 10) {
+                notifArea.removeChild(notifArea.lastChild);
+            }
+            
+            notificationCount++;
+            notifCountSpan.textContent = notificationCount;
+        }
+
+        function executeWithTarget(bugType) {
+            const target = document.getElementById('targetNumber').value.trim();
+            const group = document.getElementById('groupLink').value.trim();
+            
+            if (!target && !group) {
+                addNotification('❌ ERROR', 'Target harus diisi!', 'warning');
+                return;
+            }
+            
+            executeBug(bugType);
+        }
+
+        function executeBug(specificBug = null) {
+            const target = document.getElementById('targetNumber').value.trim();
+            const group = document.getElementById('groupLink').value.trim();
+            const method = document.getElementById('deliveryMethod').value;
+            
+            if (!target && !group) {
+                addNotification('❌ TARGET KOSONG', 'Masukkan nomor target', 'warning');
+                return;
+            }
+            
+            // Daftar bug sesuai permintaan Tuan
+            const bugList = [
+                { name: 'Force Close Android', type: 'force-close', impact: 'WA crash paksa' },
+                { name: 'Force Close Invisible', type: 'force-close-invisible', impact: 'Crash background tanpa notif' },
+                { name: 'Crash UI Android', type: 'crash-ui-andro', impact: 'UI freeze total' },
+                { name: 'Crash UI iOS', type: 'crash-ui-ios', impact: 'SpringBoard crash' },
+                { name: 'Spam Call Bomb', type: 'spam-call', impact: 'Ribuan panggilan spam' },
+                { name: 'Spam Banned', type: 'spam-banned', impact: 'Nomor di-banned WA' },
+                { name: 'Android Malware Sim', type: 'andro-malware', impact: 'Simulasi malware' },
+                { name: 'Virus WA Chain', type: 'virus-wa', impact: 'Auto spread ke kontak' },
+                { name: 'Ransomware Sim', type: 'ransomware-sim', impact: 'Simulasi enkripsi chat' },
+                { name: 'Add Crash', type: 'add-crash', impact: 'Auto grup + spam overload' },
+                { name: 'Reaction Loop', type: 'loop', impact: 'Reaksi infinite crash UI' },
+                { name: 'Voice Note Corrupt', type: 'voice-corrupt', impact: 'Crash playback' },
+                { name: 'Document Preview Crash', type: 'doc-crash', impact: 'Crash preview' },
+                { name: 'Location Spoof Crash', type: 'location-spoof', impact: 'Maps crash' },
+                { name: 'Zero-Click Crash', type: 'zero-click', impact: 'Crash tanpa interaksi' },
+                { name: 'Media Bomb', type: 'media-bomb', impact: '1000+ media force close' },
+                { name: 'Sticker Exploit', type: 'sticker-exploit', impact: 'Crash render sticker' }
+            ];
+            
+            let selectedBug;
+            if (specificBug) {
+                selectedBug = bugList.find(b => b.type === specificBug) || bugList[Math.floor(Math.random() * bugList.length)];
+            } else {
+                selectedBug = bugList[Math.floor(Math.random() * bugList.length)];
+            }
+            
+            // 98% sukses
+            const isSuccess = Math.random() < 0.98;
+            
+            const targetDisplay = target ? target.substring(0, 15) + '...' : 'grup: ' + group.substring(0, 15);
+            
+            // NOTIFIKASI UTAMA: user aman, target kena
+            if (isSuccess) {
+                addNotification(
+                    '✅ ' + selectedBug.name + ' BERHASIL',
+                    'Nomor target terkena bug wa • Perintah selesai • Pengguna AMAN (duduk diam)',
+                    'success'
+                );
+                
+                addNotification(
+                    '🛡️ SAFETY REPORT',
+                    'Pengguna: 0 lag, 0 dampak • Target: ' + selectedBug.impact,
+                    'safety'
+                );
+                
+                // Tambah ke history
+                const now = new Date();
+                const timeStr = now.getHours().toString().padStart(2,'0') + ':' +
+                               now.getMinutes().toString().padStart(2,'0') + ':' +
+                               now.getSeconds().toString().padStart(2,'0');
+                
+                const historyBody = document.getElementById('historyBody');
+                const newRow = document.createElement('tr');
+                newRow.innerHTML = `
+                    <td>${timeStr}</td>
+                    <td>${targetDisplay}</td>
+                    <td>${selectedBug.name}</td>
+                    <td class="status-safe">✓ SUCCESS</td>
+                    <td>🛡️ AMAN (duduk diam)</td>
+                    <td>Nomor target terkena bug</td>
+                `;
+                historyBody.insertBefore(newRow, historyBody.firstChild);
+                
+                while (historyBody.children.length > 10) {
+                    historyBody.removeChild(historyBody.lastChild);
+                }
+            } else {
+                addNotification('❌ GAGAL', 'Target protected atau sudah update', 'warning');
+            }
+            
+            // Notifikasi menunggu perintah selanjutnya
+            setTimeout(() => {
+                addNotification(
+                    '⏳ STATUS',
+                    'Menunggu perintah selanjutnya dari Renzz • Pengguna tetap aman',
+                    'safety'
+                );
+            }, 1500);
+        }
+
+        function clearAll() {
+            document.getElementById('targetNumber').value = '';
+            document.getElementById('groupLink').value = '';
+            
+            const notifArea = document.getElementById('notificationArea');
+            notifArea.innerHTML = '';
+            notificationCount = 0;
+            document.getElementById('notifCount').textContent = '0';
+            
+            addNotification('🔄 SYSTEM RESET', 'Semua bersih • Safety shield aktif', 'safety');
+            addNotification('⚡ READY', 'Menunggu perintah Renzz • User aman', 'success');
+        }
+
+        // Inisialisasi
+        window.onload = function() {
+            addNotification('🚀 PATRICKBUGWA ULTIMATE', '48.6 MB • 312 variants • Safety aktif', 'safety');
+            addNotification('⚡ RENZZ MODE', 'Pengguna aman • Target tidak aman', 'success');
+            document.getElementById('notifCount').textContent = '2';
+            
+            // Auto safety reminder
+            setInterval(() => {
+                if (Math.random() > 0.7) {
+                    addNotification(
+                        '🛡️ SAFETY CHECK',
+                        'Pengguna: aman • Target: menunggu • Zero lag',
+                        'safety'
+                    );
+                }
+            }, 20000);
+        };
+    </script>
+</body>
+  </html>
